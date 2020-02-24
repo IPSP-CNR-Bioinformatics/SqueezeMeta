@@ -542,8 +542,7 @@ sub moving {
 	my @nmg=keys %allsamples;
 	$numsamples=$#nmg+1;
 	print outfile3 "Samples:$numsamples\nMode:$mode\n0\n";
-	if($numsamples==1) { print "$numsamples sample found: Skipping all binning methods\n"; }
-	else { print "$numsamples samples found: @nmg\n\n"; }
+	print "$numsamples samples found: @nmg\n\n";
 
 	open(infile0,$equivfile) || die;	#-- Deleting \r in samples file for windows compatibility
 	open(outfile0,">$mappingfile") || die;  
